@@ -8,7 +8,7 @@ Release:        7%{?gver}%{?dist}
 Summary:        Video stabilize library for fmpeg, mlt or transcode
 License:        GPLv2+
 URL:            http://public.hronopik.de/vid.stab
-Source0:        https://github.com/georgmartius/vid.stab/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
+Source0:        https://github.com/georgmartius/vid.stab/archive/%{commit}/%{name}-%{shortcommit0}.tar.gz
 
 BuildRequires:  gcc-c++
 BuildRequires:  cmake
@@ -27,7 +27,7 @@ Requires:       %{name}%{?_isa} = %{version}-%{release}
 This package contains the development files (library and header files).
 
 %prep
-%autosetup -n %{name}-%{commit}
+%autosetup -n %{name}-%{commit0}
 
 %build
 %cmake .

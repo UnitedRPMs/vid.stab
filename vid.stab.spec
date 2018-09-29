@@ -4,7 +4,7 @@
 
 Name:           vid.stab
 Version:        1.1.0
-Release:        7%{?gver}%{?dist}
+Release:        8%{?gver}%{?dist}
 Summary:        Video stabilize library for fmpeg, mlt or transcode
 License:        GPLv2+
 URL:            http://public.hronopik.de/vid.stab
@@ -14,6 +14,7 @@ BuildRequires:  gcc-c++
 BuildRequires:  cmake
 BuildRequires:  orc-devel
 Requires:       glibc
+Obsoletes:	%{name}-libs 
 
 %description
 Vidstab is a video stabilization library which can be plugged-in with Ffmpeg
@@ -60,7 +61,7 @@ LD_LIBRARY_PATH=%{buildroot}%{_libdir} tests/tests || :
 
 %changelog
 
-* Sun Sep 23 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 1.1.0-7.git38ecbaf 
+* Sun Sep 23 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 1.1.0-8.git38ecbaf 
 - Updated to current commit
 - Compatibility changes
 
